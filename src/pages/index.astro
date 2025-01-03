@@ -1,16 +1,17 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import { Menu } from "../components/Menu";
+import Logo from "../components/Logo.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Kaboom">
+  <main class="relative w-full h-screen overflow-hidden">
+    <div class="absolute top-4 right-4 z-50">
+      <Menu client:load />
+    </div>
+
+    <div class="absolute inset-0 flex items-center justify-center">
+      <Logo />
+    </div>
+  </main>
+</Layout>
