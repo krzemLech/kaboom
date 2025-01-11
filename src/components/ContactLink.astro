@@ -1,0 +1,15 @@
+---
+import { Icon } from "astro-icon/components";
+const { classes } = Astro.props;
+---
+
+<a
+  href="#contact"
+  class:list={[
+    "text-gray-600 hover:text-gray-200 flex gap-2 items-center",
+    classes,
+  ]}
+>
+  Work with Me
+  <Icon name="drarrow" />
+</a>

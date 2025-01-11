@@ -1,0 +1,28 @@
+---
+import type { IconListItem } from "../types";
+import { Icon } from "astro-icon/components";
+
+const {
+  items,
+  classes = "",
+  iconLib,
+} = Astro.props as {
+  items: IconListItem[];
+  classes?: string;
+  iconLib: "devicons-plain";
+};
+---
+
+<ul class:list={["ml-4 space-y-4 mt-6", classes]}>
+  {
+    items.map((item) => (
+      <li class="flex items-center gap-2">
+        <Icon
+          name={`${iconLib}:${item.icon}`}
+          class:list={["size-6", item.color]}
+        />
+        <p>{item.name}</p>
+      </li>
+    ))
+  }
+</ul>

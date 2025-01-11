@@ -1,0 +1,52 @@
+---
+import ContactLink from "../components/ContactLink.astro";
+import Content from "../components/Content.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Content title="About" id="about">
+  <div class="space-y-6 text-gray-400">
+    <p class="text-lg leading-relaxed">
+      Welcome to Kaboom Software, a boutique development studio specialized in
+      crafting exceptional digital products.
+    </p>
+
+    <p class="leading-relaxed">
+      As a solo developer, I bring a personal touch to every project, focusing
+      on creating elegant user interfaces, robust APIs, and innovative
+      application prototypes using cutting-edge web frameworks.
+    </p>
+
+    <p class="leading-relaxed">
+      With expertise in modern technologies and a passion for clean, efficient
+      code, I transform ideas into working programs through thoughtful design
+      and precise implementation. I offer creating:
+    </p>
+
+    <div class="leading-relaxed">
+      <ul class="ml-4 space-y-4">
+        <li class="flex items-center gap-2">
+          <Icon name="server" class="size-6 text-red-500" />
+          <span>Robust RESTful APIs</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <Icon name="monitor" class="size-6 text-orange-500" />
+          <span>Modern UIs</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <Icon name="cog" class="size-6 text-yellow-500" />
+          <span>Prototypes, POCs, and MVPs</span>
+        </li>
+      </ul>
+    </div>
+
+    <p class="leading-relaxed">
+      My favourite technologies are Astro, Svelte, and Next.js for a full-stack
+      and Hono.js or FastAPI for the backend apps. If you want to see the my
+      full tech stack you can check it <a href="#tech" class="text-red-500"
+        >here</a
+      >.
+    </p>
+  </div>
+  <ContactLink classes="absolute bottom-4 right-4 text-xl" />
+</Content>

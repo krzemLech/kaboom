@@ -1,0 +1,53 @@
+---
+import ContactLink from "../components/ContactLink.astro";
+import Content from "../components/Content.astro";
+import IconList from "../components/IconList.astro";
+
+import {
+  programmingLanguages,
+  uiFrameworks,
+  beFrameworks,
+  databases,
+} from "../data/techStack";
+---
+
+<Content title="Tech Stack" id="stack">
+  <div class="space-y-6 text-gray-400">
+    <p class="text-lg leading-relaxed">
+      Kaboom Software excels in web development and so all tachnologies used are
+      tailored for that purpose.
+    </p>
+
+    <div class="leading-relaxed">
+      <p>There are three main languages you can choose from:</p>
+      <IconList items={programmingLanguages} iconLib="devicon-plain" />
+    </div>
+
+    <div class="leading-relaxed">
+      <p>
+        In case you need a fast protype or a working MVP, the following JS
+        frameworks should be an answer. These are responsive, offer reactivity
+        and provide minimum backend for an application:
+      </p>
+      <IconList items={uiFrameworks} iconLib="devicon-plain" />
+    </div>
+
+    <div class="leading-relaxed">
+      <p>
+        For RESTful APIs the following frameworks are less opinionated and
+        therfore allow for flexibility and swiftness:
+      </p>
+      <IconList items={beFrameworks} iconLib="devicon-plain" />
+    </div>
+
+    <div>
+      <p class="leading-relaxed">
+        When it comes to data, using NoSQL databases allows for a rapid
+        development and provides great developer experience, but for data
+        security and speed traditional SQL is always better.
+      </p>
+      <IconList items={databases} iconLib="devicon-plain" />
+    </div>
+  </div>
+  <ContactLink classes="absolute bottom-4 right-4 text-xl" />
+</Content>

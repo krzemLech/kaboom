@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import { Menu } from "../components/Menu";
 import Logo from "../components/Logo.astro";
+import About from "../views/About.astro";
+import TechStack from "../views/TechStack.astro";
+import Contact from "../views/Contact.astro";
 ---
 
 <Layout title="Kaboom">
@@ -13,5 +16,9 @@ import Logo from "../components/Logo.astro";
     <div class="absolute inset-0 flex items-center justify-center">
       <Logo />
     </div>
+
+    <About />
+    <TechStack />
+    <Contact />
   </main>
 </Layout>

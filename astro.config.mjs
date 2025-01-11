@@ -4,7 +4,11 @@ import react from "@astrojs/react";
 
 import netlify from "@astrojs/netlify";
 
+import icon from "astro-icon";
+
+import db from "@astrojs/db";
+
 export default defineConfig({
-  integrations: [tailwind(), react()],
+  integrations: [tailwind(), react(), icon(), db()],
   adapter: netlify(),
 });
